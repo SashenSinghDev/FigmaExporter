@@ -10,7 +10,13 @@ import ArgumentParser
 
 struct ExportColors: ParsableCommand {
 
-    public static let configuration = CommandConfiguration(abstract: "Generate a blog post banner from the given input")
+    static let configuration = CommandConfiguration(
+        commandName: "colors",
+        abstract: "Exports colors from Figma",
+        discussion: "Exports light and dark color palette from Figma to Xcode / Android Studio project")
+
+    @OptionGroup
+    var configuration: Configuration
 
     @Argument(help: "The title of the blog post")
     private var title: String

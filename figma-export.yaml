@@ -1,0 +1,16 @@
+---
+figma:
+  # Identifier of the file containing light color palette, icons and light images. To obtain a file id, open the file in the browser. The file id will be present in the URL after the word file and before the file name.
+  lightFileId: WximK7QBDMyS2XyenmA0xL
+
+# iOS export parameters
+ios:
+  # Absolute or relative path to the Assets.xcassets directory
+  xcassetsPath: "./Example/Assets.xcassets"
+
+  # [optional] Parameters for exporting colors
+  colors:
+    # [optional] Absolute or relative path to swift file where to export UIKit colors (UIColor) for accessing from the code (e.g. UIColor.backgroundPrimary)
+    colorSwift: "./Example/UIColor+extension.swift"
+    # [optional] Absolute or relative path to swift file where to export SwiftUI colors (Color) for accessing from the code (e.g. Color.backgroundPrimary)
+    swiftuiColorSwift: "./Example/Color+extension.swift"

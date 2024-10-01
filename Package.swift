@@ -16,6 +16,7 @@ let package = Package(
             name: "FigmaExporter",
             dependencies: [
                 .product(name: "ArgumentParser", package: "swift-argument-parser"),
+                .product(name: "Yams", package: "Yams"),
             ]
         ),
     ]
