@@ -11,6 +11,5 @@ struct FigmaExporter: ParsableCommand {
 
     static let configuration = CommandConfiguration(
         abstract: "A Swift command-line tool to manage blog post banners",
-        subcommands: [ExportColors.self],
-        defaultSubcommand: ExportColors.self)
+        subcommands: [ExportVariableColors.self])
 }

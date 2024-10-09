@@ -5,6 +5,19 @@ struct Params: Decodable {
     struct Figma: Decodable {
         let lightFileId: String
         let darkFileId: String?
+        let timeout: TimeInterval?
+    }
+
+    struct Common: Decodable {
+        struct VariablesColors: Decodable {
+            let tokensFileId: String
+            let tokensCollectionName: String
+
+            let lightModeName: String
+            let darkModeName: String?
+        }
+
+        let variablesColors: VariablesColors?
     }
 
     struct iOS: Decodable {
@@ -20,4 +33,5 @@ struct Params: Decodable {
 
     let figma: Figma
     let ios: iOS?
+    let common: Common?
 }

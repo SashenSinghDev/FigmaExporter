@@ -3,6 +3,17 @@ figma:
   # Identifier of the file containing light color palette, icons and light images. To obtain a file id, open the file in the browser. The file id will be present in the URL after the word file and before the file name.
   lightFileId: WximK7QBDMyS2XyenmA0xL
 
+
+common:
+  # [optional]
+  variablesColors:
+    # [required] Identifier of the file containing variables
+    tokensFileId: WximK7QBDMyS2XyenmA0xL
+    # [required] Variables collection name
+    tokensCollectionName: Application palette
+    # [required] Name of the column containing light color variables in the tokens table
+    lightModeName: Trainline Light
+    # [optional] Name of the column containing dark color variables in the tokens table
 # iOS export parameters
 ios:
   # Absolute or relative path to the Assets.xcassets directory
