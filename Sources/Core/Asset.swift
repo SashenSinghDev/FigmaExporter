@@ -154,15 +154,15 @@ public extension AssetsProcessable {
                          secondAssetName: "Light high contrast",
                          errors: &errors)
         // DescriptionMismatch
-        lightSet.forEach { asset in
-            if let dark = lightHCSet.first(where: { $0.name == asset.name }) {
-                let error = AssetsValidatorError.descriptionMismatch(
-                    assetName: asset.name,
-                    light: "",
-                    dark: "")
-                errors.all.append(error)
-            }
-        }
+//        lightSet.forEach { asset in
+//            if let dark = lightHCSet.first(where: { $0.name == asset.name }) {
+//                let error = AssetsValidatorError.descriptionMismatch(
+//                    assetName: asset.name,
+//                    light: "",
+//                    dark: "")
+//                errors.all.append(error)
+//            }
+//        }
         // Return failure
         guard errors.all.isEmpty else { return .failure(errors) }
         // Warning checks
@@ -214,15 +214,15 @@ public extension AssetsProcessable {
                          secondAssetName: "Dark high contrast",
                          errors: &errors)
         // DescriptionMismatch
-        lightSet.forEach { asset in
-            if let dark = darkSet.first(where: { $0.name == asset.name }) {
-                let error = AssetsValidatorError.descriptionMismatch(
-                    assetName: asset.name,
-                    light: "",
-                    dark: "")
-                errors.all.append(error)
-            }
-        }
+//        lightSet.forEach { asset in
+//            if let dark = darkSet.first(where: { $0.name == asset.name }) {
+//                let error = AssetsValidatorError.descriptionMismatch(
+//                    assetName: asset.name,
+//                    light: "",
+//                    dark: "")
+//                errors.all.append(error)
+//            }
+//        }
         // Return failure
         guard errors.all.isEmpty else { return .failure(errors) }
         // Warning checks

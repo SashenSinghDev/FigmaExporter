@@ -12,7 +12,7 @@ common:
     tokensCollectionName: Application palette
     # [required] Name of the column containing light color variables in the tokens table
     lightModeName: Trainline Light
-#    darkModeName: Trainline Dark
+    darkModeName: Trainline Dark
     # [optional] Name of the column containing dark color variables in the tokens table
 # iOS export parameters
 ios:
