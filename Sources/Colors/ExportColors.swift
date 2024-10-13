@@ -31,8 +31,16 @@ struct ExportVariableColors: ParsableCommand {
 
         var colors: ColorsLoaderOutput = try loader.load()
 
-        print(colors)
+        let processor = ColorsProcessor(nameValidateRegexp: nil,
+                                        nameReplaceRegexp: nil,
+                                        nameStyle: nil)
 
+        let colorPairs = processor.process(light: colors.light,
+                                           dark: colors.dark,
+                                           lightHC: colors.lightHC,
+                                           darkHC: colors.darkHC)
+
+        print(colorPairs)
     }
 }
 

@@ -7,7 +7,7 @@
 
 import Foundation
 
-typealias ColorsLoaderOutput = (light: [Color], dark: [Color]?, lightHC: [Color]?, darkHC: [Color]?)
+typealias ColorsLoaderOutput = (light: [Color], dark: [Color]?, lightHC: [Color]?, darkHC:[Color]?)
 
 
 final class ColorsVariablesLoader {
