@@ -25,9 +25,19 @@ struct Params: Decodable {
         struct Colors: Decodable {
             let colorSwift: URL?
             let swiftuiColorSwift: URL?
+            let useColorAssets: Bool
+            let assetsFolder: String?
+            let groupUsingNamespace: Bool?
         }
 
         let xcassetsPath: URL
+        let xcassetsInMainBundle: Bool
+        let xcassetsInSwiftPackage: Bool?
+        let resourceBundleNames: [String]?
+        let addObjcAttribute: Bool?
+        let templatesPath: URL?
+
+        let colors: Colors?
     }
 
 

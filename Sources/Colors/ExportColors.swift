@@ -18,6 +18,8 @@ struct ExportVariableColors: ParsableCommand {
     @OptionGroup
     var configuration: Configuration
 
+    static let fileWriter = FileWriter()
+
     func run() throws {
         let client = FigmaClient(accessToken: configuration.accessToken, timeout: configuration.params.figma.timeout)
         let figmaParams = configuration.params.figma
@@ -29,7 +31,7 @@ struct ExportVariableColors: ParsableCommand {
             filter: nil
         )
 
-        var colors: ColorsLoaderOutput = try loader.load()
+        let colors: ColorsLoaderOutput = try loader.load()
 
         let processor = ColorsProcessor(nameValidateRegexp: nil,
                                         nameReplaceRegexp: nil,
@@ -40,7 +42,41 @@ struct ExportVariableColors: ParsableCommand {
                                            lightHC: colors.lightHC,
                                            darkHC: colors.darkHC)
 
-        print(colorPairs)
+        guard let params = configuration.params.ios else { return }
+
+        try exportXcodeColors(colorPairs: colorPairs.get(), iosParams: params)
+    }
+
+    private func exportXcodeColors(colorPairs: [AssetPair<Color>], iosParams: Params.iOS) throws {
+        guard let colorParams = iosParams.colors else {
+            fatalError("Nothing to do. Add ios.colors parameters to the config file.")
+        }
+
+        var colorsURL: URL?
+        if colorParams.useColorAssets {
+            if let folder = colorParams.assetsFolder {
+                colorsURL = iosParams.xcassetsPath.appendingPathComponent(folder)
+            } else {
+                fatalError("colorsAssetsFolderNotSpecified")
+            }
+        }
+
+        let output = XcodeColorsOutput(
+            assetsColorsURL: colorsURL,
+            assetsInMainBundle: iosParams.xcassetsInMainBundle,
+            assetsInSwiftPackage: iosParams.xcassetsInSwiftPackage,
+            resourceBundleNames: iosParams.resourceBundleNames,
+            addObjcAttribute: iosParams.addObjcAttribute,
+            colorSwiftURL: colorParams.colorSwift,
+            swiftuiColorSwiftURL: colorParams.swiftuiColorSwift,
+            groupUsingNamespace: colorParams.groupUsingNamespace,
+            templatesPath: iosParams.templatesPath
+        )
+
+        let exporter = XcodeColorExporter(output: output)
+        let files = try exporter.export(colorPairs: colorPairs)
+
+        try ExportVariableColors.fileWriter.write(files: files)
     }
 }
 

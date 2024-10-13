@@ -3,7 +3,6 @@ figma:
   # Identifier of the file containing light color palette, icons and light images. To obtain a file id, open the file in the browser. The file id will be present in the URL after the word file and before the file name.
   lightFileId: WximK7QBDMyS2XyenmA0xL
 
-
 common:
   # [optional]
   variablesColors:
@@ -13,15 +12,24 @@ common:
     tokensCollectionName: Application palette
     # [required] Name of the column containing light color variables in the tokens table
     lightModeName: Trainline Light
+#    darkModeName: Trainline Dark
     # [optional] Name of the column containing dark color variables in the tokens table
 # iOS export parameters
 ios:
   # Absolute or relative path to the Assets.xcassets directory
-  xcassetsPath: "./Example/Assets.xcassets"
+  xcassetsPath: "/Users/sashensingh/Documents/Personal/FigmaExporter/Example/Assets.xcassets"
+  resourceBundleNames: []
+  xcassetsInMainBundle: true
+  xcassetsInSwiftPackage: true
+  addObjcAttribute: false
+  templatesPath: "/Users/sashensingh/Documents/Personal/FigmaExporter/Sources/Resources"
 
   # [optional] Parameters for exporting colors
   colors:
+    useColorAssets: true
+    assetsFolder: Colors
+    groupUsingNamespace: true
     # [optional] Absolute or relative path to swift file where to export UIKit colors (UIColor) for accessing from the code (e.g. UIColor.backgroundPrimary)
-    colorSwift: "./Example/UIColor+extension.swift"
+    colorSwift: "/Users/sashensingh/Documents/Personal/FigmaExporter/Example/UIColor+extension.swift"
     # [optional] Absolute or relative path to swift file where to export SwiftUI colors (Color) for accessing from the code (e.g. Color.backgroundPrimary)
-    swiftuiColorSwift: "./Example/Color+extension.swift"
+    swiftuiColorSwift: "/Users/sashensingh/Documents/Personal/FigmaExporter/Example/Color+extension.swift"
