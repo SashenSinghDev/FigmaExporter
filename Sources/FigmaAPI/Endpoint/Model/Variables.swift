@@ -16,6 +16,7 @@ public struct VariableCollectionValue: Decodable {
     public var name: String
     public var modes: [Mode]
     public var variableIds: [String]
+    public var hiddenFromPublishing: Bool
 }
 
 public struct VariableAlias: Codable {
