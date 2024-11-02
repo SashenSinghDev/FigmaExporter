@@ -13,7 +13,7 @@ struct ExportVariableColors: ParsableCommand {
     static let configuration = CommandConfiguration(
         commandName: "variableColors",
         abstract: "Exports colors from Figma",
-        discussion: "Exports light and dark color palette from Figma to Xcode / Android Studio project")
+        discussion: "Exports light and dark color palette from Figma to Xcode")
 
     @OptionGroup
     var configuration: Configuration
@@ -42,9 +42,14 @@ struct ExportVariableColors: ParsableCommand {
                                            lightHC: colors.lightHC,
                                            darkHC: colors.darkHC)
 
-        guard let params = configuration.params.ios else { return }
 
-        try exportXcodeColors(colorPairs: colorPairs.get(), iosParams: params)
+        if let iosParams = configuration.params.ios {
+            try exportXcodeColors(colorPairs: colorPairs.get(), iosParams: iosParams)
+        }
+
+        if let androidParams = configuration.params.android {
+            try exportAndroidColors(colorPairs: colorPairs.get(), androidParams: androidParams)
+        }
     }
 
     private func exportXcodeColors(colorPairs: [AssetPair<Color>], iosParams: Params.iOS) throws {
@@ -75,6 +80,30 @@ struct ExportVariableColors: ParsableCommand {
 
         let exporter = XcodeColorExporter(output: output)
         let files = try exporter.export(colorPairs: colorPairs)
+
+        try ExportVariableColors.fileWriter.write(files: files)
+    }
+
+    private func exportAndroidColors(colorPairs: [AssetPair<Color>], androidParams: Params.Android) throws {
+        let output = AndroidOutput(
+            xmlOutputDirectory: androidParams.mainRes,
+            xmlResourcePackage: nil,//androidParams.resourcePackage,
+            srcDirectory: nil,//androidParams.mainSrc,
+            packageName: androidParams.colors?.composePackageName,
+            templatesPath: nil//androidParams.templatesPath
+        )
+
+        let exporter = AndroidColorExporter(output: output, xmlOutputFileName: androidParams.colors?.xmlOutputFileName)
+
+        let files = try exporter.export(colorPairs: colorPairs)
+
+        let fileName = androidParams.colors?.xmlOutputFileName ?? "colors.xml"
+
+        let lightColorsFileURL = androidParams.mainRes.appendingPathComponent("values/" + fileName)
+        let darkColorsFileURL = androidParams.mainRes.appendingPathComponent("values-night/" + fileName)
+
+        try? FileManager.default.removeItem(atPath: lightColorsFileURL.path)
+        try? FileManager.default.removeItem(atPath: darkColorsFileURL.path)
 
         try ExportVariableColors.fileWriter.write(files: files)
     }

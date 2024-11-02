@@ -33,3 +33,11 @@ ios:
     colorSwift: "/Users/sashensingh/Documents/Personal/FigmaExporter/Example/UIColor+extension.swift"
     # [optional] Absolute or relative path to swift file where to export SwiftUI colors (Color) for accessing from the code (e.g. Color.backgroundPrimary)
     swiftuiColorSwift: "/Users/sashensingh/Documents/Personal/FigmaExporter/Example/Color+extension.swift"
+
+android:
+  # Relative or absolute path to the `main/res` folder including it. The colors/icons/imags will be exported to this folder
+  mainRes: "/Users/sashensingh/Documents/Personal/FigmaExporter/Example/"
+  # Parameters for exporting icons
+  icons:
+    # Where to place icons relative to `mainRes`? FigmaExport clears this directory every time your execute `figma-export icons` command
+    output: "figma-export-icons"

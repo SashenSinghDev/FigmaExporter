@@ -20,6 +20,21 @@ struct Params: Decodable {
         let variablesColors: VariablesColors?
     }
 
+    enum VectorFormat: String, Decodable {
+        case pdf
+        case svg
+    }
+
+    struct Android: Decodable {
+        struct Colors: Decodable {
+            let xmlOutputFileName: String?
+            let composePackageName: String?
+        }
+
+        let mainRes: URL
+        let colors: Colors?
+    }
+
     struct iOS: Decodable {
 
         struct Colors: Decodable {
@@ -28,6 +43,20 @@ struct Params: Decodable {
             let useColorAssets: Bool
             let assetsFolder: String?
             let groupUsingNamespace: Bool?
+        }
+        
+        struct Icons: Decodable {
+            let format: VectorFormat
+            let assetsFolder: String
+            let preservesVectorRepresentation: [String]?
+
+            let imageSwift: URL?
+            let swiftUIImageSwift: URL?
+
+            let renderMode: XcodeRenderMode?
+            let renderModeDefaultSuffix: String?
+            let renderModeOriginalSuffix: String?
+            let renderModeTemplateSuffix: String?
         }
 
         let xcassetsPath: URL
@@ -38,10 +67,12 @@ struct Params: Decodable {
         let templatesPath: URL?
 
         let colors: Colors?
+        let icons: Icons?
     }
 
 
     let figma: Figma
     let ios: iOS?
+    let android: Android?
     let common: Common?
 }
