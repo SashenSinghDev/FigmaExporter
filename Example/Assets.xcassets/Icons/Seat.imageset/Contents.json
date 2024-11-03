@@ -1,0 +1,16 @@
+{
+  "images" : [
+    {
+      "filename" : "Seat.pdf",
+      "idiom" : "universal"
+    },
+    {
+      "filename" : "Seat.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "images" : [
+    {
+      "filename" : "Voucher.pdf",
+      "idiom" : "universal"
+    },
+    {
+      "filename" : "Voucher.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

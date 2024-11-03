@@ -1,0 +1,16 @@
+{
+  "images" : [
+    {
+      "filename" : "Parking.pdf",
+      "idiom" : "universal"
+    },
+    {
+      "filename" : "Parking.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "images" : [
+    {
+      "filename" : "WiFi.pdf",
+      "idiom" : "universal"
+    },
+    {
+      "filename" : "WiFi.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

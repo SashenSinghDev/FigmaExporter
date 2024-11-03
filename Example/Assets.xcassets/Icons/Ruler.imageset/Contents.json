@@ -1,0 +1,16 @@
+{
+  "images" : [
+    {
+      "filename" : "Ruler.pdf",
+      "idiom" : "universal"
+    },
+    {
+      "filename" : "Ruler.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

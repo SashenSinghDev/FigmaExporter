@@ -1,0 +1,16 @@
+{
+  "images" : [
+    {
+      "filename" : "City.pdf",
+      "idiom" : "universal"
+    },
+    {
+      "filename" : "City.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "images" : [
+    {
+      "filename" : "Railcard.pdf",
+      "idiom" : "universal"
+    },
+    {
+      "filename" : "Railcard.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

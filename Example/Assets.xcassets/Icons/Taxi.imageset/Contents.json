@@ -1,0 +1,16 @@
+{
+  "images" : [
+    {
+      "filename" : "Taxi.pdf",
+      "idiom" : "universal"
+    },
+    {
+      "filename" : "Taxi.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

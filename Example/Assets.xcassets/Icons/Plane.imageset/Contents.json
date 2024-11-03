@@ -1,0 +1,16 @@
+{
+  "images" : [
+    {
+      "filename" : "Plane.pdf",
+      "idiom" : "universal"
+    },
+    {
+      "filename" : "Plane.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

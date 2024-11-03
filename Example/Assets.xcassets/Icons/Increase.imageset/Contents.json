@@ -1,0 +1,16 @@
+{
+  "images" : [
+    {
+      "filename" : "Increase.pdf",
+      "idiom" : "universal"
+    },
+    {
+      "filename" : "Increase.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

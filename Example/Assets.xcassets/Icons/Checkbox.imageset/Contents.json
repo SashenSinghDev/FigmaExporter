@@ -1,0 +1,16 @@
+{
+  "images" : [
+    {
+      "filename" : "Checkbox.pdf",
+      "idiom" : "universal"
+    },
+    {
+      "filename" : "Checkbox.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

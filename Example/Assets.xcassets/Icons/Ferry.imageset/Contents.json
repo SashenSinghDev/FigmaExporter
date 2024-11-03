@@ -1,0 +1,16 @@
+{
+  "images" : [
+    {
+      "filename" : "Ferry.pdf",
+      "idiom" : "universal"
+    },
+    {
+      "filename" : "Ferry.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "images" : [
+    {
+      "filename" : "ChildSeat.pdf",
+      "idiom" : "universal"
+    },
+    {
+      "filename" : "ChildSeat.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

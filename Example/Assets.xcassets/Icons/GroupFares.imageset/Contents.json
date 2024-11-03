@@ -1,0 +1,16 @@
+{
+  "images" : [
+    {
+      "filename" : "GroupFares.pdf",
+      "idiom" : "universal"
+    },
+    {
+      "filename" : "GroupFares.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

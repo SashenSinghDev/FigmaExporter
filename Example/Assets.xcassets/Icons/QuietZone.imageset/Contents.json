@@ -1,0 +1,16 @@
+{
+  "images" : [
+    {
+      "filename" : "QuietZone.pdf",
+      "idiom" : "universal"
+    },
+    {
+      "filename" : "QuietZone.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "images" : [
+    {
+      "filename" : "Printer.pdf",
+      "idiom" : "universal"
+    },
+    {
+      "filename" : "Printer.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

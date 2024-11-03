@@ -1,0 +1,16 @@
+{
+  "images" : [
+    {
+      "filename" : "Coach.pdf",
+      "idiom" : "universal"
+    },
+    {
+      "filename" : "Coach.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

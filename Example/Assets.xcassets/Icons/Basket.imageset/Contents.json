@@ -1,0 +1,16 @@
+{
+  "images" : [
+    {
+      "filename" : "Basket.pdf",
+      "idiom" : "universal"
+    },
+    {
+      "filename" : "Basket.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

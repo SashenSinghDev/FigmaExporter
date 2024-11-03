@@ -1,0 +1,16 @@
+{
+  "images" : [
+    {
+      "filename" : "OpenReturn.pdf",
+      "idiom" : "universal"
+    },
+    {
+      "filename" : "OpenReturn.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

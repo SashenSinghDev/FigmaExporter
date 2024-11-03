@@ -1,0 +1,16 @@
+{
+  "images" : [
+    {
+      "filename" : "Return.pdf",
+      "idiom" : "universal"
+    },
+    {
+      "filename" : "Return.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

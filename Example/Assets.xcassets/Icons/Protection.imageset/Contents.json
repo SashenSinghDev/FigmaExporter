@@ -1,0 +1,16 @@
+{
+  "images" : [
+    {
+      "filename" : "Protection.pdf",
+      "idiom" : "universal"
+    },
+    {
+      "filename" : "Protection.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

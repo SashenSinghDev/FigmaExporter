@@ -1,0 +1,16 @@
+{
+  "images" : [
+    {
+      "filename" : "Bin.pdf",
+      "idiom" : "universal"
+    },
+    {
+      "filename" : "Bin.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

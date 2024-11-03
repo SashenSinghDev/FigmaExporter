@@ -17,7 +17,25 @@ struct Params: Decodable {
             let darkModeName: String?
         }
 
+        struct Icons: Decodable {
+            let nameValidateRegexp: String?
+            let figmaFrameName: String?
+            let nameReplaceRegexp: String?
+            let useSingleFile: Bool?
+            let darkModeSuffix: String?
+        }
+
+        struct Images: Decodable {
+            let nameValidateRegexp: String?
+            let figmaFrameName: String?
+            let nameReplaceRegexp: String?
+            let useSingleFile: Bool?
+            let darkModeSuffix: String?
+        }
+
         let variablesColors: VariablesColors?
+        let icons: Icons?
+        let images: Images?
     }
 
     enum VectorFormat: String, Decodable {
@@ -31,8 +49,35 @@ struct Params: Decodable {
             let composePackageName: String?
         }
 
+        struct Icons: Decodable {
+            let output: String
+            let composePackageName: String?
+        }
+
+        struct Images: Decodable {
+            enum Format: String, Decodable {
+                case svg
+                case png
+                case webp
+            }
+            struct FormatOptions: Decodable {
+                enum Encoding: String, Decodable {
+                    case lossy
+                    case lossless
+                }
+                let encoding: Encoding
+                let quality: Int?
+            }
+            let scales: [Double]?
+            let output: String
+            let format: Format
+            let webpOptions: FormatOptions?
+        }
+
         let mainRes: URL
         let colors: Colors?
+        let icons: Icons?
+        let images: Images?
     }
 
     struct iOS: Decodable {
@@ -59,6 +104,14 @@ struct Params: Decodable {
             let renderModeTemplateSuffix: String?
         }
 
+        struct Images: Decodable {
+            let assetsFolder: String
+            let scales: [Double]?
+
+            let imageSwift: URL?
+            let swiftUIImageSwift: URL?
+        }
+
         let xcassetsPath: URL
         let xcassetsInMainBundle: Bool
         let xcassetsInSwiftPackage: Bool?
@@ -68,6 +121,7 @@ struct Params: Decodable {
 
         let colors: Colors?
         let icons: Icons?
+        let images: Images?
     }
 
 

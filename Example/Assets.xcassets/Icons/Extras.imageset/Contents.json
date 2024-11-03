@@ -1,0 +1,16 @@
+{
+  "images" : [
+    {
+      "filename" : "Extras.pdf",
+      "idiom" : "universal"
+    },
+    {
+      "filename" : "Extras.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "images" : [
+    {
+      "filename" : "Plug.pdf",
+      "idiom" : "universal"
+    },
+    {
+      "filename" : "Plug.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

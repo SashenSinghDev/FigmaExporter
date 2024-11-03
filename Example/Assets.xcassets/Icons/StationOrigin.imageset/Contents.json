@@ -1,0 +1,16 @@
+{
+  "images" : [
+    {
+      "filename" : "StationOrigin.pdf",
+      "idiom" : "universal"
+    },
+    {
+      "filename" : "StationOrigin.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

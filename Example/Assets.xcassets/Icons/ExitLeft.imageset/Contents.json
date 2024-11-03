@@ -1,0 +1,16 @@
+{
+  "images" : [
+    {
+      "filename" : "ExitLeft.pdf",
+      "idiom" : "universal"
+    },
+    {
+      "filename" : "ExitLeft.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
