@@ -25,6 +25,7 @@ public extension Image {
     static var Bed: Image { Image(#function) }
     static var BedLinen: Image { Image(#function) }
     static var Bell: Image { Image(#function) }
+    static var Bell_Filled: Image { Image(#function) }
     static var Bicycle: Image { Image(#function) }
     static var Bin: Image { Image(#function) }
     static var Breakfast: Image { Image(#function) }
@@ -34,8 +35,6 @@ public extension Image {
     static var Castle: Image { Image(#function) }
     static var Changes: Image { Image(#function) }
     static var Check: Image { Image(#function) }
-    static var Checkbox: Image { Image(#function) }
-    static var Chevron: Image { Image(#function) }
     static var ChildPassenger: Image { Image(#function) }
     static var ChildSeat: Image { Image(#function) }
     static var City: Image { Image(#function) }
@@ -57,7 +56,6 @@ public extension Image {
     static var ExitRight: Image { Image(#function) }
     static var ExternalLink: Image { Image(#function) }
     static var Extras: Image { Image(#function) }
-    static var Eye: Image { Image(#function) }
     static var Ferry: Image { Image(#function) }
     static var Filter: Image { Image(#function) }
     static var FirstLast: Image { Image(#function) }
@@ -66,6 +64,7 @@ public extension Image {
     static var GroupFares: Image { Image(#function) }
     static var Haptics: Image { Image(#function) }
     static var Heart: Image { Image(#function) }
+    static var Heart_Filled: Image { Image(#function) }
     static var Help: Image { Image(#function) }
     static var History: Image { Image(#function) }
     static var Home: Image { Image(#function) }
@@ -79,18 +78,12 @@ public extension Image {
     static var Lounge: Image { Image(#function) }
     static var Luggage: Image { Image(#function) }
     static var Magic: Image { Image(#function) }
+    static var Magic_Filled: Image { Image(#function) }
     static var MineralWater: Image { Image(#function) }
     static var Minus: Image { Image(#function) }
     static var More: Image { Image(#function) }
     static var Multi-Passengers: Image { Image(#function) }
-    static var Multiple Railcards: Image { Image(#function) }
-    static var Native_Material_Arrow_Down: Image { Image(#function) }
-    static var Native_Material_Arrow_Up: Image { Image(#function) }
-    static var Native_Material_Check: Image { Image(#function) }
-    static var Native_Material_Check_indeterminate: Image { Image(#function) }
-    static var Native_Material_Clear: Image { Image(#function) }
-    static var Native_SF_checkmark: Image { Image(#function) }
-    static var Native_SF_xmark.circle.fill: Image { Image(#function) }
+    static var MultipleRailcards: Image { Image(#function) }
     static var Newspaper: Image { Image(#function) }
     static var NoImage: Image { Image(#function) }
     static var NonExchangeable: Image { Image(#function) }
@@ -144,6 +137,7 @@ public extension Image {
     static var StairsDown: Image { Image(#function) }
     static var StairsUp: Image { Image(#function) }
     static var Star: Image { Image(#function) }
+    static var Star_Filled: Image { Image(#function) }
     static var Station: Image { Image(#function) }
     static var StationDestination: Image { Image(#function) }
     static var StationOrigin: Image { Image(#function) }
@@ -153,7 +147,6 @@ public extension Image {
     static var TV: Image { Image(#function) }
     static var Tag: Image { Image(#function) }
     static var Taxi: Image { Image(#function) }
-    static var ThumbUp: Image { Image(#function) }
     static var Ticket: Image { Image(#function) }
     static var TicketMachine: Image { Image(#function) }
     static var TicketStack: Image { Image(#function) }

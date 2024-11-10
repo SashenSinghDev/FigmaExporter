@@ -254,8 +254,41 @@ final class ImagesLoader {
             imagesDict.removeValue(forKey: nodeId)
         }
 
+        let imagesDictWithRelevantIcons = imagesDict.compactMap { (key, value) in
+            let containingStateGroupName: String? = {
+                guard let containingStateGroupName = value.containingFrame.containingStateGroup?.name else  {
+                    return nil
+                }
+
+                switch value.name {
+                case "Size=32, Filled=True":
+                    return "\(containingStateGroupName)_Filled"
+                case "Size=32, Filled=False", "Size=32":
+                    return "\(containingStateGroupName)"
+                default:
+                    return nil
+                }
+            }()
+
+            let  containingStateGroup = ContainingStateGroup(name: containingStateGroupName?.removeWhitespace(),
+                                                             nodeID: value.containingFrame.containingStateGroup?.nodeID)
+
+            let containingFrame = ContainingFrame(nodeID: value.containingFrame.nodeID,
+                                                  name: value.containingFrame.name,
+                                                  pageName: value.containingFrame.pageName,
+                                                  containingStateGroup: containingStateGroup)
+
+            let componentValue = Component(key: value.key,
+                                           nodeId: value.nodeId,
+                                           name: value.name,
+                                           description: value.description,
+                                           containingFrame: containingFrame)
+
+            return (key: key, value: componentValue)
+        }
+
         // Group images by name
-        let groups = Dictionary(grouping: imagesDict) {
+        let groups = Dictionary(grouping: imagesDictWithRelevantIcons) {
             if let contianingName = $1.containingFrame.containingStateGroup?.name {
                 contianingName.parseNameAndIdiom(platform: platform).name
             } else  {
@@ -270,9 +303,17 @@ final class ImagesLoader {
                     return nil
                 }
                 let (name, idiom) = component.name.parseNameAndIdiom(platform: platform)
+
+                guard name == "Size=32" || 
+                        name == "Size=32, Filled=True" ||
+                        name == "Size=32, Filled=False" else { return nil }
+
                 let isRTL = component.useRTL()
                 return Image(name: name, scale: .all, idiom: idiom, url: url, format: params.format, isRTL: isRTL)
             }
+
+            guard !packImages.isEmpty else { return nil }
+
             return ImagePack(name: packName, images: packImages, platform: platform)
         }
         return imagePacks
@@ -407,3 +448,13 @@ extension Component {
         return description.localizedCaseInsensitiveContains("rtl")
     }
 }
+
+extension String {
+    func replace(string:String, replacement:String) -> String {
+        return self.replacingOccurrences(of: string, with: replacement, options: NSString.CompareOptions.literal, range: nil)
+    }
+
+    func removeWhitespace() -> String {
+        return self.replace(string: " ", replacement: "")
+    }
+  }

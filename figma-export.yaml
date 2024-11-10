@@ -28,7 +28,7 @@ ios:
     format: pdf
     assetsFolder: Icons
     swiftUIImageSwift: "/Users/sashensingh/Documents/Personal/FigmaExporter/Example/Image+Icons.swift"
-    imageSwift: "/Users/sashensingh/Documents/Personal/FigmaExporter/Example/UIImage+extension_icons.swift"
+    imageSwift: "/Users/sashensingh/Documents/Personal/FigmaExporter/Example/UIImage+Icons.swift"
     renderMode: default
 
   # [optional] Parameters for exporting colors

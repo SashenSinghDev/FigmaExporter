@@ -25,6 +25,7 @@ public extension UIImage {
     static var Bed: UIImage { UIImage(named: #function)! }
     static var BedLinen: UIImage { UIImage(named: #function)! }
     static var Bell: UIImage { UIImage(named: #function)! }
+    static var Bell_Filled: UIImage { UIImage(named: #function)! }
     static var Bicycle: UIImage { UIImage(named: #function)! }
     static var Bin: UIImage { UIImage(named: #function)! }
     static var Breakfast: UIImage { UIImage(named: #function)! }
@@ -34,8 +35,6 @@ public extension UIImage {
     static var Castle: UIImage { UIImage(named: #function)! }
     static var Changes: UIImage { UIImage(named: #function)! }
     static var Check: UIImage { UIImage(named: #function)! }
-    static var Checkbox: UIImage { UIImage(named: #function)! }
-    static var Chevron: UIImage { UIImage(named: #function)! }
     static var ChildPassenger: UIImage { UIImage(named: #function)! }
     static var ChildSeat: UIImage { UIImage(named: #function)! }
     static var City: UIImage { UIImage(named: #function)! }
@@ -57,7 +56,6 @@ public extension UIImage {
     static var ExitRight: UIImage { UIImage(named: #function)! }
     static var ExternalLink: UIImage { UIImage(named: #function)! }
     static var Extras: UIImage { UIImage(named: #function)! }
-    static var Eye: UIImage { UIImage(named: #function)! }
     static var Ferry: UIImage { UIImage(named: #function)! }
     static var Filter: UIImage { UIImage(named: #function)! }
     static var FirstLast: UIImage { UIImage(named: #function)! }
@@ -66,6 +64,7 @@ public extension UIImage {
     static var GroupFares: UIImage { UIImage(named: #function)! }
     static var Haptics: UIImage { UIImage(named: #function)! }
     static var Heart: UIImage { UIImage(named: #function)! }
+    static var Heart_Filled: UIImage { UIImage(named: #function)! }
     static var Help: UIImage { UIImage(named: #function)! }
     static var History: UIImage { UIImage(named: #function)! }
     static var Home: UIImage { UIImage(named: #function)! }
@@ -79,18 +78,12 @@ public extension UIImage {
     static var Lounge: UIImage { UIImage(named: #function)! }
     static var Luggage: UIImage { UIImage(named: #function)! }
     static var Magic: UIImage { UIImage(named: #function)! }
+    static var Magic_Filled: UIImage { UIImage(named: #function)! }
     static var MineralWater: UIImage { UIImage(named: #function)! }
     static var Minus: UIImage { UIImage(named: #function)! }
     static var More: UIImage { UIImage(named: #function)! }
     static var Multi-Passengers: UIImage { UIImage(named: #function)! }
-    static var Multiple Railcards: UIImage { UIImage(named: #function)! }
-    static var Native_Material_Arrow_Down: UIImage { UIImage(named: #function)! }
-    static var Native_Material_Arrow_Up: UIImage { UIImage(named: #function)! }
-    static var Native_Material_Check: UIImage { UIImage(named: #function)! }
-    static var Native_Material_Check_indeterminate: UIImage { UIImage(named: #function)! }
-    static var Native_Material_Clear: UIImage { UIImage(named: #function)! }
-    static var Native_SF_checkmark: UIImage { UIImage(named: #function)! }
-    static var Native_SF_xmark.circle.fill: UIImage { UIImage(named: #function)! }
+    static var MultipleRailcards: UIImage { UIImage(named: #function)! }
     static var Newspaper: UIImage { UIImage(named: #function)! }
     static var NoImage: UIImage { UIImage(named: #function)! }
     static var NonExchangeable: UIImage { UIImage(named: #function)! }
@@ -144,6 +137,7 @@ public extension UIImage {
     static var StairsDown: UIImage { UIImage(named: #function)! }
     static var StairsUp: UIImage { UIImage(named: #function)! }
     static var Star: UIImage { UIImage(named: #function)! }
+    static var Star_Filled: UIImage { UIImage(named: #function)! }
     static var Station: UIImage { UIImage(named: #function)! }
     static var StationDestination: UIImage { UIImage(named: #function)! }
     static var StationOrigin: UIImage { UIImage(named: #function)! }
@@ -153,7 +147,6 @@ public extension UIImage {
     static var TV: UIImage { UIImage(named: #function)! }
     static var Tag: UIImage { UIImage(named: #function)! }
     static var Taxi: UIImage { UIImage(named: #function)! }
-    static var ThumbUp: UIImage { UIImage(named: #function)! }
     static var Ticket: UIImage { UIImage(named: #function)! }
     static var TicketMachine: UIImage { UIImage(named: #function)! }
     static var TicketStack: UIImage { UIImage(named: #function)! }
